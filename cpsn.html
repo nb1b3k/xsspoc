@@ -1,0 +1,46 @@
+<html>
+  <body>
+    <script>
+      function submitForm(id) {
+        var form = document.createElement('form');
+        form.action = 'https://annotator.bii.a-star.edu.sg/annie/ShowObject.do';
+        form.method = 'GET';
+
+        var idInput = document.createElement('input');
+        idInput.type = 'hidden';
+        idInput.name = 'print';
+        idInput.value = "true";
+
+        form.appendChild(idInput);
+
+        var idInput = document.createElement('input');
+        idInput.type = 'hidden';
+        idInput.name = 'view_state';
+        idInput.value = "page_size>100|urn>bio:set:cbs:public|page>0|view_param>default|result_visibility>all|nav_bar_size>5|tree_open>f";
+
+        form.appendChild(idInput);
+
+        var idInput = document.createElement('input');
+        idInput.type = 'hidden';
+        idInput.name = 'triage';
+        idInput.value = "this";
+
+        form.appendChild(idInput);
+
+        document.body.appendChild(form);
+        form.submit();
+        document.body.removeChild(form);
+      }
+
+      function sendRequests() {
+        var minID = 27700;
+        var maxID = 27702;
+        for (var id = minID; id <= maxID; id++) {
+          setTimeout(submitForm, 100 * (id - minID + 1), id); // Delay each request by 100 millisecond
+        }
+      }
+
+      window.addEventListener('DOMContentLoaded', sendRequests);
+    </script>
+  </body>
+</html>
